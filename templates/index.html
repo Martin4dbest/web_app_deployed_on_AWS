@@ -1,0 +1,32 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Application</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Web Application</h1>
+    </header>
+    
+    <div class="container">
+        <h2>About Us</h2>
+        <p>This is a simple web application deployed on AWS.</p>
+        <button onclick="displayWelcomeMessage()">Click Me</button>
+        <div id="hiddenContent" style="display: none;">
+            <p>This is some hidden content that appears when you click the button.</p>
+        </div>
+        <button onclick="toggleVisibility('hiddenContent')">Toggle Visibility</button>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 My Web Application. All rights reserved.</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
